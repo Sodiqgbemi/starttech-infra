@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "AWS region"
   type        = string
-  default     = "us-east-1"
+  default     = "eu-north-1"
 }
 
 variable "vpc_cidr" {
@@ -26,7 +26,7 @@ variable "kubernetes_version" {
 
 variable "node_instance_type" {
   type    = string
-  default = "t3.medium"
+  default = "t3.small"
 }
 
 variable "node_desired_size" {
@@ -47,5 +47,5 @@ variable "node_max_size" {
 variable "alb_dns_name" {
   description = "Backend ALB DNS name (set after Ingress creates the ALB, then re-apply)"
   type        = string
-  default     = "placeholder.elb.us-east-1.amazonaws.com"
+  default     = "placeholder.elb.eu-north-1.amazonaws.com"
 }
